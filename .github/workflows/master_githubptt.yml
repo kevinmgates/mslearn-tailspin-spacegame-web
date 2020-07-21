@@ -22,6 +22,10 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
+    
+    - name: Build the unit test project
+      run: dotnet build --configuration Release
+      # dotnet build /home/vsts/work/1/s/Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj --no-restore --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
