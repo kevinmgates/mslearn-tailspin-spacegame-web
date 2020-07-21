@@ -23,6 +23,14 @@ jobs:
       with:
         dotnet-version: '3.1.102'
 
+    - name: Set up npm
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Run npm install
+      run: npm install
+
     - name: Build with dotnet
       run: dotnet build --configuration Release
     
