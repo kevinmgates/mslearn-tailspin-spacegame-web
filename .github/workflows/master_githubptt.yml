@@ -43,11 +43,11 @@ jobs:
     - name: Add GPR as package source
       run: dotnet nuget add source --username ${{secrets.USERNAME}} --password ${{secrets.GPRPAT}} --name github https://nuget.pkg.github.com/kevinmgates/index.json
 
-    - name: Build with dotnet
+    - name: Build with web project
       run: dotnet build Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj --configuration Release
     
     - name: Build the unit test project
-      run: dotnet build Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj --no-restore --configuration Release
+      run: dotnet build Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj --configuration Release
     
     - name: Run the unit test
       run: dotnet test Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj --configuration Release
