@@ -10,6 +10,7 @@ on:
     paths:
     - Tailspin.SpaceGame.Web/*
     - Tailspin.SpaceGame.Web.Tests/*
+    - .github/workflows/master_githubptt.yml
 
 jobs:
   build-and-deploy:
