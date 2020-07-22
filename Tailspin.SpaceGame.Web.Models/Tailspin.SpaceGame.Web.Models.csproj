@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/kevinmgates/mslearn-tailspin-spacegame-web.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
