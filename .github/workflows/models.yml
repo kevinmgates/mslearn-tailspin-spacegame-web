@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '3.1.102'
     
     - name: Build the models project
-      run: dotnet build Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Model.csproj --no-restore --configuration Release
+      run: dotnet build Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj --no-restore --configuration Release
     
     - name: Pack the models project
-      run: dotnet pack Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Model.csproj --no-restore --no-build --configuration Release -p:PackageVersion=1.0.$GITHUB_RUN_NUMBER
+      run: dotnet pack Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj --no-restore --no-build --configuration Release -p:PackageVersion=1.0.$GITHUB_RUN_NUMBER
