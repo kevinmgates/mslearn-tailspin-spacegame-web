@@ -19,9 +19,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.102'
-
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
     
     - name: Build the models project
       run: dotnet build Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Model.csproj --no-restore --configuration Release
