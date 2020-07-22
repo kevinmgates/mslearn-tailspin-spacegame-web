@@ -40,6 +40,9 @@ jobs:
       run: gulp
       shell: bash
 
+    - name: Add GPR as package source
+      run: dotnet nuget add source --username ${{secrets.USERNAME}} --password ${{secrets.GPRPAT}} --name github https://nuget.pkg.github.com/kevinmgates/index.json
+
     - name: Build with dotnet
       run: dotnet build --configuration Release
     
