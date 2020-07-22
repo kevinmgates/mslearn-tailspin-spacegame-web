@@ -22,7 +22,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.102'
+        dotnet-version: '3.1.200'
 
     - name: Set up npm
       uses: actions/setup-node@v1
