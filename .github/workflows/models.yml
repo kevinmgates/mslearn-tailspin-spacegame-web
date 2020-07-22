@@ -1,0 +1,30 @@
+name: models
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+    - Tailspin.SpaceGame.Web.Models/*
+    - .github/workflows/models.yml
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    
+    - name: Build the models project
+      run: dotnet build Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Model.csproj --no-restore --configuration Release
+    
+    - name: Pack the models project
+      run: dotnet pack Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Model.csproj --no-restore --no-build --configuration Release -p:PackageVersion=1.0.$GITHUB_RUN_NUMBER
