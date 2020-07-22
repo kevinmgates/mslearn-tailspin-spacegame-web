@@ -20,6 +20,9 @@ jobs:
       with:
         dotnet-version: '3.1.102'
     
+    - name: Restore packages for the models project
+      run: dotnet restore Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj 
+
     - name: Build the models project
       run: dotnet build Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj --no-restore --configuration Release
     
