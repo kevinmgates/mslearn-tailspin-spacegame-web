@@ -32,6 +32,10 @@ jobs:
     - name: Run npm install
       run: npm install
 
+    - name: Compile Sass assets
+      run: ./node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot
+      shell: bash
+
     - name: Build with dotnet
       run: dotnet build --configuration Release
     
