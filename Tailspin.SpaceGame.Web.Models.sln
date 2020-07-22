@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30223.230
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tailspin.SpaceGame.Web.Models", "TailSpin.SpaceGame.Web.Models\Tailspin.SpaceGame.Web.Models.csproj", "{552CB8CF-7805-4021-BF5E-B7105EE7B215}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{552CB8CF-7805-4021-BF5E-B7105EE7B215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552CB8CF-7805-4021-BF5E-B7105EE7B215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552CB8CF-7805-4021-BF5E-B7105EE7B215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552CB8CF-7805-4021-BF5E-B7105EE7B215}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FFC7375-9582-4962-80ED-8C600E12B8EA}
+	EndGlobalSection
+EndGlobal
