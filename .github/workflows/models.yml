@@ -19,9 +19,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.102'
-        source-url: https://nuget.pkg.github.com/kevinmgates/mslearn-tailspin-spacegame-web/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
     - name: Restore packages for the models project
       run: dotnet restore Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj 
@@ -31,6 +28,14 @@ jobs:
     
     - name: Pack the models project
       run: dotnet pack Tailspin.SpaceGame.Web.Models/Tailspin.SpaceGame.Web.Models.csproj --no-restore --no-build --configuration Release -p:PackageVersion=1.0.$GITHUB_RUN_NUMBER
+
+    - name: Set up GPR
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.102'
+        source-url: https://nuget.pkg.github.com/kevinmgates/mslearn-tailspin-spacegame-web/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Push the models package
       run: dotnet nuget push Tailspin.SpaceGame.Web.Models/bin/Release/Tailspin.SpaceGame.Web.Models.1.0.$GITHUB_RUN_NUMBER.nupkg
